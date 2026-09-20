@@ -89,3 +89,107 @@ Le nombre d'éditions des Jeux olympiques est fixé à `5`. Cette valeur ne sera
 Plusieurs `console.log` sont présents dans le code pour afficher des informations de débogage, ce qui encombre inutilement la console du navigateur.
 
 **Amélioration envisagée :** supprimer les `console.log` inutiles.
+
+## 2. Proposition d'une nouvelle architecture
+
+### 2.1 Nouvelle structure du projet
+
+L'application actuelle concentre plusieurs responsabilités dans le fichier
+App.tsx, ce qui rend le code difficile à lire et à maintenir.
+
+Je propose de séparer les pages, les composants réutilisables, les hooks,
+les modèles TypeScript et les données simulées.
+
+```text
+src/
+│
+├── app/
+│   ├── components/
+│   │   ├── HeaderComponent.tsx
+│   │   ├── Indicator.tsx
+│   │   ├── MedalsPieChart.tsx
+│   │   └── MedalsEvolutionChart.tsx
+│   │
+│   ├── pages/
+│   │   ├── DashboardPage.tsx
+│   │   └── CountryDetailPage.tsx
+│   │
+│   ├── hooks/
+│   │   └── useData.ts
+│   │
+│   ├── models/
+│   │   ├── Olympic.ts
+│   │   └── Participation.ts
+│   │
+│   ├── data/
+│   │   └── olympics.json
+│   │
+│   ├── utils/
+│   │   └── olympicCalculations.ts
+│   │
+│   └── App.tsx
+│
+├── index.css
+└── main.tsx
+```
+
+### 2.2 Justification des choix
+
+- **Pages :** les composants DashboardPage et CountryDetailPage
+  récupèrent les données et gèrent la logique propre à chaque page.
+
+- **Components :** les composants réutilisables reçoivent leurs données
+  via des props et se concentrent sur l'affichage.
+
+- **Hooks :** le hook useData centralise l'accès aux données ainsi que
+  les états de chargement et d'erreur.
+
+- **Models :** les interfaces Olympic et Participation permettent
+  de typer les données et de remplacer les types any.
+
+- **Data :** les données simulées sont séparées des composants React.
+
+- **Utils :** les fonctions de calcul des statistiques sont
+  réutilisables et indépendantes de l'interface.
+
+Cette organisation permet de séparer les responsabilités, de limiter
+la duplication du code et de faciliter sa maintenance.
+
+Elle prépare également l'intégration future d'une API REST : les pages
+continueront d'utiliser le hook useData, tandis que la récupération
+des données pourra évoluer sans modifier les composants d'affichage.
+
+### 2.3 Circulation des données
+
+Les pages `DashboardPage` et `CountryDetailPage` utiliseront le hook
+`useData` pour récupérer les données nécessaires.
+
+Les données seront ensuite transmises aux composants de présentation
+via des props.
+
+```text
+Données simulées (JSON)
+         |
+         v
+      useData
+         |
+         v
+DashboardPage / CountryDetailPage
+         |
+         v
+Composants réutilisables
+(HeaderComponent, graphiques...)
+```
+
+Cette séparation permet aux composants de présentation de se concentrer
+uniquement sur l'affichage, sans gérer directement la récupération des données.
+
+### 2.4 Préparation à une future API REST
+
+La récupération des données est centralisée dans le hook `useData`.
+
+Actuellement, les données proviennent de fichiers JSON simulés.
+À l'avenir, elles pourront être récupérées depuis une API REST.
+
+Cette organisation permettra de modifier la source des données
+sans avoir à modifier les composants de présentation.
