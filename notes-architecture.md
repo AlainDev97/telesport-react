@@ -90,6 +90,52 @@ Plusieurs `console.log` sont présents dans le code pour afficher des informatio
 
 **Amélioration envisagée :** supprimer les `console.log` inutiles.
 
+### 1.12 Catégorisation des problèmes
+
+Les problèmes identifiés peuvent être regroupés par catégories afin de mieux comprendre leur nature.
+
+| Catégorie                            | Problèmes concernés                                       |
+| ------------------------------------ | --------------------------------------------------------- |
+| **Typage**                           | 1.1 Utilisation du type `any`                             |
+| **Structure / architecture**         | 1.2 Fichier `App.tsx` trop volumineux                     |
+| **Gestion et placement des données** | 1.3 Données codées en dur dans `App.tsx`                  |
+| **Duplication**                      | 1.4 Duplication du code                                   |
+| **Gestion des effets React**         | 1.5 Mauvaise gestion des effets secondaires (`useEffect`) |
+| **Séparation des responsabilités**   | 1.6 Logique métier dans les composants                    |
+| **Gestion des états**                | 1.7 Gestion incomplète des états                          |
+| **Navigation**                       | 1.8 Navigation incomplète                                 |
+| **Robustesse**                       | 1.9 Absence de vérification des identifiants              |
+| **Maintenabilité**                   | 1.10 Valeurs codées en dur                                |
+| **Nettoyage du code**                | 1.11 Présence de `console.log`                            |
+
+Cette catégorisation montre que les principaux problèmes du starter code concernent la séparation des responsabilités, la maintenabilité, le typage et l'organisation générale de l'application.
+
+### 1.13 Priorisation des problèmes
+
+Les problèmes identifiés n'ont pas tous le même impact sur la maintenabilité et la fiabilité de l'application.
+
+#### Priorité haute
+
+- **1.1 Utilisation du type `any`** : réduit fortement la sécurité apportée par TypeScript.
+- **1.2 Fichier `App.tsx` trop volumineux** : concentre trop de responsabilités et complique la maintenance.
+- **1.3 Données codées en dur dans `App.tsx`** : mélange les données et l'interface, et complique une future connexion à une API.
+- **1.5 Mauvaise gestion des effets secondaires** : peut provoquer des comportements inattendus.
+- **1.7 Gestion incomplète des états** : ne permet pas de gérer correctement les cas de chargement, d'erreur ou d'absence de données.
+- **1.9 Absence de vérification des identifiants** : peut provoquer une erreur lors de l'accès à un pays inexistant.
+
+#### Priorité moyenne
+
+- **1.4 Duplication du code** : augmente le risque d'incohérences lors des modifications.
+- **1.6 Logique métier dans les composants** : rend les composants plus difficiles à lire, réutiliser et tester.
+- **1.8 Navigation incomplète** : empêche l'accès normal à certaines fonctionnalités prévues.
+
+#### Priorité basse
+
+- **1.10 Valeurs codées en dur** : limite l'adaptation automatique de l'application lorsque les données évoluent.
+- **1.11 Présence de `console.log`** : n'empêche pas le fonctionnement de l'application, mais doit être nettoyée avant livraison.
+
+Cette priorisation permet de traiter en premier les problèmes pouvant provoquer des erreurs ou ayant le plus fort impact sur l'architecture et la maintenabilité du projet.
+
 ## 2. Proposition d'une nouvelle architecture
 
 ### 2.1 Nouvelle structure du projet
