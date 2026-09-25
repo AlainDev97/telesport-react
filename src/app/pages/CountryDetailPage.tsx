@@ -72,11 +72,23 @@ export const CountryDetailPage = () => {
       <div className="max-w-6xl mx-auto">
         <Link
           to="/"
-          className="inline-block mb-8 text-blue-400 underline
-                     hover:text-blue-300 focus-visible:outline-2
-                     focus-visible:outline-offset-4"
+          className="
+                  inline-flex items-center gap-2
+                  mb-8 px-4 py-2
+                  rounded-lg
+                  bg-gray-800
+                  border border-gray-700
+                  text-sm font-medium text-gray-200
+                  transition-colors
+                  hover:bg-gray-700
+                  hover:text-white
+                  focus-visible:outline-2
+                  focus-visible:outline-offset-4
+                  focus-visible:outline-blue-400
+                "
         >
-          ← Retour au Dashboard
+          <span aria-hidden="true">←</span>
+          Retour au Dashboard
         </Link>
 
         <HeaderComponent title={country.country} indicators={indicators} />

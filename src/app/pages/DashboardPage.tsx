@@ -46,15 +46,17 @@ export const DashboardPage = () => {
   return (
     <main className="min-h-screen bg-gray-900 text-white p-4 md:p-8">
       <div className="max-w-6xl mx-auto">
-        <HeaderComponent
-          title="Historique des Jeux Olympiques - TéléSport"
-          indicators={indicators}
-        />
+        <div className="flex flex-col justify-center items-center text-center">
+          <HeaderComponent
+            title="Historique des Jeux Olympiques - TéléSport"
+            indicators={indicators}
+          />
 
-        <p className="text-lg mb-8">
-          Bienvenue sur la page dédiée à l'historique des Jeux Olympiques.
-          Explorez les performances des pays au fil des années.
-        </p>
+          <p className="text-lg mb-8">
+            Bienvenue sur la page dédiée à l'historique des Jeux Olympiques.
+            Explorez les performances des pays au fil des années.
+          </p>
+        </div>
 
         <MedalsPieChart countries={data} />
 

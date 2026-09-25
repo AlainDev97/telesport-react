@@ -5,7 +5,7 @@ interface IndicatorProps {
 
 export const Indicator = ({ label, value }: IndicatorProps) => {
   return (
-    <div className="bg-gray-800 p-6 rounded-lg shadow-lg text-center">
+    <div className="bg-gray-800 p-6 rounded-lg shadow-lg text-center w-75 max-w-xs">
       <h3 className="text-xl font-semibold mb-2">{label}</h3>
 
       <p className="text-4xl font-bold text-blue-400">{value}</p>
