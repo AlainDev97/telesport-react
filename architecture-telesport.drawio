@@ -1,0 +1,109 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="HH8ip-g_9XiL2tqnvXnh">
+    <mxGraphModel dx="858" dy="439" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="light-dark(#333333,#121212)" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="rVPKW_lemkFBL5O-hc8T-23" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;convertToSvg=0;" value="Composant de présentation&lt;div&gt;DUMB&lt;/div&gt;" vertex="1">
+          <mxGeometry height="129" width="180" x="324" y="661" as="geometry" />
+        </mxCell>
+        <mxCell id="rVPKW_lemkFBL5O-hc8T-27" parent="rVPKW_lemkFBL5O-hc8T-23" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" value="HeaderComponent" vertex="1">
+          <mxGeometry height="26" width="180" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="rVPKW_lemkFBL5O-hc8T-24" parent="rVPKW_lemkFBL5O-hc8T-23" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" value="Indicator" vertex="1">
+          <mxGeometry height="25" width="180" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="rVPKW_lemkFBL5O-hc8T-25" parent="rVPKW_lemkFBL5O-hc8T-23" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" value="MedalsPieChart" vertex="1">
+          <mxGeometry height="26" width="180" y="77" as="geometry" />
+        </mxCell>
+        <mxCell id="rVPKW_lemkFBL5O-hc8T-26" parent="rVPKW_lemkFBL5O-hc8T-23" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" value="MedalsEvolutionChart" vertex="1">
+          <mxGeometry height="26" width="180" y="103" as="geometry" />
+        </mxCell>
+        <UserObject label="App.tsx&lt;div&gt;Routage&lt;/div&gt;" treeRoot="1" id="rVPKW_lemkFBL5O-hc8T-6">
+          <mxCell parent="1" style="whiteSpace=wrap;html=1;align=center;treeFolding=1;treeMoving=1;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;startArrow&quot;:&quot;none&quot;,&quot;endArrow&quot;:&quot;none&quot;};" vertex="1">
+            <mxGeometry height="60" width="120" x="354" y="63" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="rVPKW_lemkFBL5O-hc8T-7" parent="1" style="whiteSpace=wrap;html=1;align=center;verticalAlign=middle;treeFolding=1;treeMoving=1;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;startArrow&quot;:&quot;none&quot;,&quot;endArrow&quot;:&quot;none&quot;};" value="CountryDetailPage&lt;div&gt;SMART&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="100" x="474" y="161" as="geometry" />
+        </mxCell>
+        <mxCell id="rVPKW_lemkFBL5O-hc8T-8" edge="1" parent="1" style="edgeStyle=elbowEdgeStyle;elbow=vertical;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startArrow=none;endArrow=none;rounded=0;curved=0;strokeColor=#FFFFFF;" target="rVPKW_lemkFBL5O-hc8T-7" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="414" y="123" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rVPKW_lemkFBL5O-hc8T-9" parent="1" style="whiteSpace=wrap;html=1;align=center;verticalAlign=middle;treeFolding=1;treeMoving=1;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;startArrow&quot;:&quot;none&quot;,&quot;endArrow&quot;:&quot;none&quot;};" value="DashboardPage&lt;div&gt;SMART&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="100" x="254" y="161" as="geometry" />
+        </mxCell>
+        <mxCell id="rVPKW_lemkFBL5O-hc8T-10" edge="1" parent="1" source="rVPKW_lemkFBL5O-hc8T-6" style="edgeStyle=elbowEdgeStyle;elbow=vertical;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startArrow=none;endArrow=none;rounded=0;curved=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeColor=#FFFFFF;" target="rVPKW_lemkFBL5O-hc8T-9" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="379.67" y="103.83" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rVPKW_lemkFBL5O-hc8T-12" edge="1" parent="1" source="rVPKW_lemkFBL5O-hc8T-11" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;endArrow=none;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=#FFFFFF;" target="rVPKW_lemkFBL5O-hc8T-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="404&lt;div&gt;NotFoundPage&lt;/div&gt;" treeRoot="1" id="rVPKW_lemkFBL5O-hc8T-11">
+          <mxCell parent="1" style="whiteSpace=wrap;html=1;align=center;treeFolding=1;treeMoving=1;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;startArrow&quot;:&quot;none&quot;,&quot;endArrow&quot;:&quot;none&quot;};" vertex="1">
+            <mxGeometry height="60" width="104" x="362" y="161" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="rVPKW_lemkFBL5O-hc8T-19" edge="1" parent="1" source="rVPKW_lemkFBL5O-hc8T-14" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;endArrow=none;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=#FFFFFF;" target="rVPKW_lemkFBL5O-hc8T-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rVPKW_lemkFBL5O-hc8T-20" edge="1" parent="1" source="rVPKW_lemkFBL5O-hc8T-14" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;endArrow=none;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=#FFFFFF;" target="rVPKW_lemkFBL5O-hc8T-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rVPKW_lemkFBL5O-hc8T-22" edge="1" parent="1" source="rVPKW_lemkFBL5O-hc8T-14" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;endArrow=none;strokeColor=#FFFFFF;" target="rVPKW_lemkFBL5O-hc8T-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="useData&lt;div&gt;Custom Hook&lt;/div&gt;" treeRoot="1" id="rVPKW_lemkFBL5O-hc8T-14">
+          <mxCell parent="1" style="whiteSpace=wrap;html=1;align=center;treeFolding=1;treeMoving=1;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;startArrow&quot;:&quot;none&quot;,&quot;endArrow&quot;:&quot;none&quot;};" vertex="1">
+            <mxGeometry height="60" width="120" x="354" y="308" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="olympics.json&lt;div&gt;Données mockées&lt;/div&gt;" treeRoot="1" id="rVPKW_lemkFBL5O-hc8T-21">
+          <mxCell parent="1" style="whiteSpace=wrap;html=1;align=center;treeFolding=1;treeMoving=1;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;startArrow&quot;:&quot;none&quot;,&quot;endArrow&quot;:&quot;none&quot;};" vertex="1">
+            <mxGeometry height="60" width="120" x="354" y="434" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="rVPKW_lemkFBL5O-hc8T-29" edge="1" parent="1" source="rVPKW_lemkFBL5O-hc8T-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=light-dark(#ffffff, #ededed);" target="rVPKW_lemkFBL5O-hc8T-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rVPKW_lemkFBL5O-hc8T-28" parent="1" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;rounded=0;fontColor=#FFFFFF;" value="DashboardPage / CountryDetailPage" vertex="1">
+          <mxGeometry height="30" width="246" x="291" y="577" as="geometry" />
+        </mxCell>
+        <mxCell id="rVPKW_lemkFBL5O-hc8T-32" edge="1" parent="1" source="rVPKW_lemkFBL5O-hc8T-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontColor=#FFFFFF;strokeColor=light-dark(#ffffff, #ededed);" target="rVPKW_lemkFBL5O-hc8T-31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rVPKW_lemkFBL5O-hc8T-30" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontColor=#FFFFFF;" value="Pages" vertex="1">
+          <mxGeometry height="30" width="60" x="383.5" y="844" as="geometry" />
+        </mxCell>
+        <UserObject label="olympicCalculations.ts&lt;div&gt;Fonction utilitaires&lt;/div&gt;" treeRoot="1" id="rVPKW_lemkFBL5O-hc8T-31">
+          <mxCell parent="1" style="whiteSpace=wrap;html=1;align=center;treeFolding=1;treeMoving=1;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;startArrow&quot;:&quot;none&quot;,&quot;endArrow&quot;:&quot;none&quot;};" vertex="1">
+            <mxGeometry height="60" width="155" x="336" y="918" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="rVPKW_lemkFBL5O-hc8T-36" edge="1" parent="1" source="rVPKW_lemkFBL5O-hc8T-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;strokeColor=light-dark(#ffffff, #ededed);" target="rVPKW_lemkFBL5O-hc8T-35">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rVPKW_lemkFBL5O-hc8T-37" edge="1" parent="1" source="rVPKW_lemkFBL5O-hc8T-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;strokeColor=light-dark(#ffffff, #ededed);" target="rVPKW_lemkFBL5O-hc8T-34">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rVPKW_lemkFBL5O-hc8T-33" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontColor=#FFFFFF;" value="Typage des données" vertex="1">
+          <mxGeometry height="30" width="149" x="339" y="1008" as="geometry" />
+        </mxCell>
+        <UserObject label="Olympic.d.ts" treeRoot="1" id="rVPKW_lemkFBL5O-hc8T-34">
+          <mxCell parent="1" style="whiteSpace=wrap;html=1;align=center;treeFolding=1;treeMoving=1;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;startArrow&quot;:&quot;none&quot;,&quot;endArrow&quot;:&quot;none&quot;};" vertex="1">
+            <mxGeometry height="60" width="120" x="239" y="1063" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Participation.d.ts" treeRoot="1" id="rVPKW_lemkFBL5O-hc8T-35">
+          <mxCell parent="1" style="whiteSpace=wrap;html=1;align=center;treeFolding=1;treeMoving=1;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;startArrow&quot;:&quot;none&quot;,&quot;endArrow&quot;:&quot;none&quot;};" vertex="1">
+            <mxGeometry height="60" width="120" x="470" y="1063" as="geometry" />
+          </mxCell>
+        </UserObject>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
