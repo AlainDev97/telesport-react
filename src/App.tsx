@@ -9,6 +9,7 @@ export const App = () => {
       <Routes>
         <Route path="/" element={<DashboardPage />} />
         <Route path="/country/:id" element={<CountryDetailPage />} />
+        <Route path="/not-found" element={<NotFound />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>

@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, Navigate } from "react-router-dom";
 
 import { HeaderComponent } from "../components/HeaderComponent";
 import { MedalsEvolutionChart } from "../components/MedalsEvolutionChart";
@@ -39,17 +39,7 @@ export const CountryDetailPage = () => {
   const country = data.find((country) => country.id === Number(id));
 
   if (!country) {
-    return (
-      <main className="min-h-screen bg-gray-900 text-white p-4 md:p-8">
-        <p role="alert" className="mb-4">
-          Le pays demandé est introuvable.
-        </p>
-
-        <Link to="/" className="text-blue-400 underline">
-          Retour au Dashboard
-        </Link>
-      </main>
-    );
+    return <Navigate to="/not-found" replace />;
   }
 
   const indicators = [
