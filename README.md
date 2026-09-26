@@ -1,122 +1,335 @@
-# TéléSport - Olympic Games History Dashboard
+# TéléSport – Jeux Olympiques
 
-Interactive web application to visualize historical performance data of countries in the Olympic Games.
+Application React permettant de consulter les performances de plusieurs pays aux Jeux Olympiques.
 
-## 🚀 Features
+Le projet propose un dashboard avec les statistiques globales et un graphique des médailles, ainsi qu'une page de détail pour chaque pays avec ses indicateurs principaux et l'évolution de ses performances au fil des différentes éditions.
 
-- **Interactive Dashboard**: View medal counts by country with interactive charts
-- **Country Details**: Explore detailed statistics for each participating country
-- **Data Visualization**: Interactive charts powered by Chart.js
-- **Responsive Design**: Optimized for desktop and mobile devices
-- **Modern Stack**: Built with React 19, TypeScript, and Tailwind CSS
+---
 
-## 📋 Prerequisites
+## Fonctionnalités
 
-- **Node.js** 22 LTS or higher
-- **npm** (included with Node.js)
+- Affichage du nombre de pays participants
+- Affichage du nombre d'éditions des Jeux Olympiques
+- Graphique circulaire représentant le total de médailles par pays
+- Navigation vers la page détail d'un pays depuis le graphique
+- Affichage des informations détaillées d'un pays :
+  - nombre de participations
+  - nombre total de médailles
+  - nombre total d'athlètes
+- Graphique d'évolution des médailles par édition
+- Navigation entre le Dashboard et les pages de détail
+- Gestion des identifiants de pays invalides
+- Page 404 pour les routes inconnues
+- Gestion des états de chargement et d'erreur
+- Interface responsive sur desktop, tablette et mobile
 
-## 🛠️ Installation
+---
 
-Clone the repository:
+## Stack technique
+
+- React
+- TypeScript
+- Vite
+- React Router
+- Chart.js
+- react-chartjs-2
+- Tailwind CSS
+
+---
+
+## Prérequis
+
+Avant de lancer le projet, vous devez disposer de :
+
+- Node.js
+- npm
+
+---
+
+## Installation
+
+Cloner le dépôt :
 
 ```bash
-git clone https://github.com/openclassrooms/p2-dfsjs.git
-cd p2-dfsjs
+git clone <URL_DU_REPOSITORY>
 ```
 
-Install dependencies:
+Se placer dans le dossier du projet :
+
+```bash
+cd DFSJS-D-finissez-et-d-veloppez-le-front-end-en-utilisant-du-code-React-maintenable
+```
+
+Installer les dépendances :
 
 ```bash
 npm install
 ```
 
-## 🎯 Usage
+---
 
-### Development Server
+## Lancement en développement
 
-Start the development server:
+Pour lancer l'application :
 
 ```bash
 npm run dev
 ```
 
-The application will be available at [http://localhost:5173](http://localhost:5173)
+Vite affichera ensuite l'adresse locale permettant d'accéder à l'application.
 
-### Production Build
+Exemple :
 
-Build the application for production:
+```text
+http://localhost:5173
+```
+
+---
+
+## Build de production
+
+Pour vérifier que l'application compile correctement :
 
 ```bash
 npm run build
 ```
 
-### Linting
-
-Run the linter to check code quality:
-
-```bash
-npm run lint
-```
-
-## 📁 Project Structure
-
-```
-p2-dfsjs/
-├── public/              # Static public assets
-├── src/
-│   ├── App.tsx         # Main application component
-│   ├── main.tsx        # React entry point
-│   └── index.css       # Global styles
-├── index.html          # Main HTML page
-├── package.json        # Project dependencies
-├── tsconfig.json       # TypeScript configuration
-├── vite.config.ts      # Vite configuration
-├── tailwind.config.js  # Tailwind CSS configuration
-└── .eslintrc.cjs       # ESLint configuration
-```
-
-## 🔧 Tech Stack
-
-- **React 19** - UI library with latest features
-- **TypeScript** - Static type checking
-- **Vite 5** - Fast build tool and dev server
-- **Tailwind CSS 4** - Utility-first CSS framework
-- **React Router 6** - Client-side routing
-- **Chart.js** - Interactive data visualization
-- **ESLint** - Code quality and consistency
-
-## 📊 Data
-
-The application currently uses mock data to simulate Olympic Games statistics. This architecture is designed to facilitate future integration with a REST API backend.
-
-## 🎨 Design
-
-The application features:
-
-- Clean, modern interface optimized for data visualization
-- Responsive layout adapting to all screen sizes
-- Interactive charts with hover effects
-- Smooth navigation between pages
-
-## 📚 Documentation
-
-For more information on the technologies used:
-
-- [React Documentation](https://react.dev)
-- [TypeScript Handbook](https://www.typescriptlang.org/docs/)
-- [Vite Guide](https://vitejs.dev)
-- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
-- [React Router Documentation](https://reactrouter.com)
-- [Chart.js Documentation](https://www.chartjs.org/docs/latest/)
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## 📝 License
-
-This project is available for educational and personal use.
+Cette commande lance la vérification TypeScript puis génère le build de production avec Vite.
 
 ---
 
-**Built with React 19 + TypeScript + Vite + Tailwind CSS**
+## Structure du projet
+
+```text
+src/
+│
+├── app/
+│   ├── components/
+│   │   ├── HeaderComponent.tsx
+│   │   ├── Indicator.tsx
+│   │   ├── MedalsPieChart.tsx
+│   │   └── MedalsEvolutionChart.tsx
+│   │
+│   ├── pages/
+│   │   ├── DashboardPage.tsx
+│   │   ├── CountryDetailPage.tsx
+│   │   └── NotFound.tsx
+│   │
+│   ├── hooks/
+│   │   └── useData.ts
+│   │
+│   ├── models/
+│   │   ├── Olympic.ts
+│   │   └── Participation.ts
+│   │
+│   ├── data/
+│   │   └── olympics.json
+│   │
+│   ├── utils/
+│   │   └── olympicCalculations.ts
+│   │
+│   └── config/
+│       └── chart.ts
+│
+├── App.tsx
+├── main.tsx
+└── index.css
+```
+
+---
+
+## Architecture
+
+L'application suit une séparation claire des responsabilités.
+
+### Pages
+
+Les pages sont les composants principaux de l'application.
+
+Elles récupèrent les données grâce au hook `useData` et transmettent les informations nécessaires aux composants de présentation.
+
+Principales pages :
+
+- `DashboardPage`
+- `CountryDetailPage`
+- `NotFound`
+
+### Components
+
+Les composants du dossier `components` sont principalement responsables de l'affichage.
+
+Ils reçoivent leurs données via des props et ne récupèrent pas directement les données de l'application.
+
+Exemples :
+
+- `HeaderComponent`
+- `Indicator`
+- `MedalsPieChart`
+- `MedalsEvolutionChart`
+
+### Hooks
+
+Le hook `useData` centralise l'accès aux données.
+
+Il permet également de gérer les états :
+
+- `data`
+- `loading`
+- `error`
+
+Les pages n'accèdent donc pas directement au fichier JSON.
+
+### Models
+
+Les interfaces TypeScript permettent de typer les données utilisées dans l'application :
+
+- `Olympic`
+- `Participation`
+
+Cela permet d'éviter l'utilisation du type `any`.
+
+### Utils
+
+Le fichier `olympicCalculations.ts` contient les fonctions de calcul réutilisables :
+
+- calcul du total des médailles
+- calcul du total des athlètes
+- calcul du nombre de participations
+- calcul du nombre d'éditions des Jeux Olympiques
+
+---
+
+## Gestion des données
+
+Les données sont actuellement simulées grâce au fichier :
+
+```text
+src/app/data/olympics.json
+```
+
+Le hook `useData` constitue le point d'accès unique à ces données.
+
+Le flux actuel est :
+
+```text
+olympics.json
+     ↓
+   useData
+     ↓
+    Pages
+     ↓
+ Composants
+```
+
+Cette architecture permet de remplacer facilement les données simulées par une API REST dans une future version de l'application.
+
+---
+
+## Navigation
+
+L'application utilise React Router.
+
+Routes principales :
+
+```text
+/
+```
+
+Affiche le Dashboard.
+
+```text
+/country/:id
+```
+
+Affiche les informations détaillées du pays correspondant à l'identifiant.
+
+Les routes inconnues affichent une page 404.
+
+---
+
+## Gestion des erreurs
+
+L'application gère plusieurs situations :
+
+- état de chargement
+- erreur lors du chargement des données
+- absence de données
+- identifiant de pays invalide
+- URL inconnue
+
+L'objectif est d'éviter qu'un utilisateur arrive sur une page vide ou sur un message technique incompréhensible.
+
+---
+
+## Responsive
+
+L'interface a été adaptée pour fonctionner sur :
+
+- desktop
+- tablette
+- mobile
+
+La mise en page utilise principalement les utilitaires `flex`, `grid` et les breakpoints responsive de Tailwind CSS.
+
+Les indicateurs et graphiques s'adaptent à la largeur disponible.
+
+---
+
+## Documentation complémentaire
+
+Deux fichiers complémentaires décrivent les choix réalisés pendant le projet :
+
+```text
+notes-architecture.md
+```
+
+Contient l'analyse du starter code, les problèmes identifiés, leur catégorisation et leur priorisation.
+
+```text
+ARCHITECTURE.md
+```
+
+Présente l'architecture finale de l'application et les responsabilités des différents dossiers et composants.
+
+---
+
+## Captures d'écran
+
+Les captures d'écran du projet peuvent être placées dans un dossier :
+
+```text
+docs/screenshots/
+```
+
+Par exemple :
+
+```text
+docs/screenshots/dashboard-desktop.png
+docs/screenshots/dashboard-mobile.png
+docs/screenshots/country-desktop.png
+docs/screenshots/country-mobile.png
+```
+
+Elles permettent de présenter le rendu de l'application sur plusieurs tailles d'écran.
+
+---
+
+## Choix techniques
+
+Plusieurs choix ont été faits afin d'améliorer la maintenabilité du starter code :
+
+- séparation des pages et composants réutilisables
+- centralisation des données dans un Custom Hook
+- utilisation d'interfaces TypeScript
+- suppression des types `any`
+- extraction des fonctions de calcul
+- centralisation de la configuration Chart.js
+- mise en place de React Router
+- gestion des erreurs de navigation
+- adaptation responsive avec Tailwind CSS
+
+---
+
+## Auteur
+
+Projet réalisé dans le cadre de la formation Lead Developer JavaScript OpenClassrooms.
