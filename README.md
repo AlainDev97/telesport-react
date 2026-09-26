@@ -51,7 +51,7 @@ Avant de lancer le projet, vous devez disposer de :
 Cloner le dépôt :
 
 ```bash
-git clone <URL_DU_REPOSITORY>
+git clone https://github.com/AlainDev97/telesport-react.git
 ```
 
 Se placer dans le dossier du projet :
