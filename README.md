@@ -295,13 +295,11 @@ Présente l'architecture finale de l'application et les responsabilités des dif
 
 ## Captures d'écran
 
-Les captures d'écran du projet peuvent être placées dans un dossier :
+Les captures d'écran du projet sont placées dans un dossier :
 
 ```text
 docs/screenshots/
 ```
-
-Par exemple :
 
 ```text
 docs/screenshots/dashboard-desktop.png
@@ -332,4 +330,4 @@ Plusieurs choix ont été faits afin d'améliorer la maintenabilité du starter 
 
 ## Auteur
 
-Projet réalisé dans le cadre de la formation Lead Developer JavaScript OpenClassrooms.
+Projet réalisé par moi même dans le cadre de la formation Lead Developer JavaScript OpenClassrooms.
